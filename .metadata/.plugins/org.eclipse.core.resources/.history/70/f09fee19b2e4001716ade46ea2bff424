@@ -1,0 +1,12 @@
+package fr.m2i.etudesjava;
+
+/*
+ * Une interface est une collection de : 
+ * - Méthodes sans corps en précisant seulement leurs signatures et type 
+ * de retours 
+ * -  
+ */
+interface IMesurable
+{
+	double calculerPerimetre();
+}

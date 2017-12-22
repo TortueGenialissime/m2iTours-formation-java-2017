@@ -1,0 +1,9 @@
+package fr.m2i.etudesjava;
+
+public class Habitation implements Iimposable {
+	/*
+	 * La taxe habitation dépend de : 
+	 * - la surface de l'appartement
+	 * - de la localisation de l'appartement
+	 */
+}

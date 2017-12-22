@@ -1,0 +1,14 @@
+package fr.m2i.thread;
+
+import java.util.Vector;
+
+public class FileAttente implements MonContainer{
+	public static Vector<Personne> instances = new Vector<>();
+	
+	@Override
+	public String getNbObjets() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

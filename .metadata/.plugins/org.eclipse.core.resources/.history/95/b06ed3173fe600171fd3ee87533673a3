@@ -1,0 +1,36 @@
+package fr.m2i.thread;
+
+import java.util.ArrayList;
+
+public class Pile implements MonContainer {
+	public static ArrayList<Personne> instances = new ArrayList<>();
+	
+	private ArrayList<Personne> getPile(){
+		return instances;
+	}
+	private void push(Personne personne) {
+		
+	}
+	
+	private void pop(Personne personne) {
+		if(getPile().contains(personne))
+			getPile().remove(personne);
+	}
+	
+	@Override
+	public int getNbObjets() {
+		return getPile().size();
+	}
+	
+	public String afficherPile() 
+	{
+		String tabPile = "";
+		for(Personne elm : getPile())
+		{
+			tabPile += "-------------------------------------------\n"+
+						"|\t"+elm.getPrenom()+" "+elm.getNom();
+		
+		}
+	}
+
+}

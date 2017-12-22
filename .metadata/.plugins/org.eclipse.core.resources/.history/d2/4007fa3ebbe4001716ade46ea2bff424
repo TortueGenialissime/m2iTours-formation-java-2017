@@ -1,0 +1,28 @@
+package fr.m2i.etudesjava;
+
+/*
+ * Une interface est une collection de : 
+ * - Méthodes sans corps en précisant seulement leurs signatures et type 
+ * de retours 
+ * - Des constantes static du genre => static final ...
+ * 
+ * Les classes qui implémentent une interface doivent proposer un corps pour toutes les méthodes imposées par 
+ * l'interface
+ * 
+ * De ce point de vue, on peut voir l'interface comme un contrat : 
+ * les classes qui signent le contrat doivent respecter ses clauses (c'est à dire implémenter
+ * les méthodes de l'interfaces)
+ * 
+ * Tout comme les classes et les énumérations, une interfaces définit un type 
+ * si une classe A est héritée par une classe B et si la classe B implémente l'interface C, la classe B est du type : 
+ * - A
+ * - B
+ * - C
+ * 
+ * Une même classe peut avoir donc plusieurs profils
+ * On appelle ceci le polymorphisme
+ */
+interface IMesurable
+{
+	double calculerPerimetre();
+}

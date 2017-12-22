@@ -1,0 +1,54 @@
+package fr.m2i.thread;
+
+public class Personne {
+	private String[] tabNom = {"Durand", "Le Gall", "Martin", "Thomas", "Roux", "Richard", "Dubois", "Morel", "Girard" , "Mercier", "Garnier"};
+	private String[] tabPrenom = {"Emma", "Jade", "Louis", "Gabriel", "Julien", "Tom", "Zoé", "Lina", "Eva", "Camille", "Manon", "Théo", "Nathan"};
+	private String[] typeVoie = {"allée", "rue", "cité", "résidence", "boulevard"};
+	private String[] ville = {"Lyon", "Tours", "Chartres", "Nantes", "Paris", "Montpellier", "Marseille", "Metz", "Le Havre", "Biaritz", "Quimper"};
+	private String nom, prenom, adresse, ville;
+	private int codePostal;
+	
+	public Personne(String nom, String prenom, String adresse, String ville, int codePostal) {
+		
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresse = adresse;
+		this.ville = ville;
+		this.codePostal = codePostal;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	public String getAdresse() {
+		return adresse;
+	}
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+	public String getVille() {
+		return ville;
+	}
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+	public int getCodePostal() {
+		return codePostal;
+	}
+	@Override
+	public String toString() {
+		return nom + " " + prenom;
+	}
+	public void setCodePostal(int codePostal) {
+		this.codePostal = codePostal;
+	}
+	
+}

@@ -1,0 +1,8 @@
+package fr.m2i.etudesjava;
+
+public class Achat {
+	public static enum TypeTVA{TVA0, TVA1, TVA5, TVA20};
+	
+	private double prixHT;
+	private TypesTVA typeTVA;
+}

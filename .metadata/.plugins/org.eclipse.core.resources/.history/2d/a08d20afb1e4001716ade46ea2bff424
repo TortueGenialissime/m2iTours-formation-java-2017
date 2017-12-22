@@ -1,0 +1,11 @@
+package fr.m2i.etudesjava;
+
+/*
+ * Une interface est une collection de : 
+ * - Méthodes sans corps 
+ * - 
+ */
+interface IMesurable
+{
+	
+}

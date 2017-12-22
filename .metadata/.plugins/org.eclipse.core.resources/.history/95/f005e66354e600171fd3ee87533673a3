@@ -1,0 +1,21 @@
+package fr.m2i.thread;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Personne p1 = new Personne("Le gall", "Paul", "8 rue test", "Chartres", 28000);
+		Personne p2 = new Personne("Test", "prenom", "8 rue test", "Chartres", 28000);
+		Personne p3 = new Personne("Picole", "Gerard", "8 rue test", "Chartres", 28000);
+		Personne p4 = new Personne("Test", "sdsds", "8 rue test", "Chartres", 28000);
+		CarnetAdresses ca = new CarnetAdresses();
+		ca.insert(p1);
+		ca.insert(p2);
+		ca.insert(p3);
+		ca.delete(p4);
+		System.out.println(ca.getCarnet());
+	}
+
+}

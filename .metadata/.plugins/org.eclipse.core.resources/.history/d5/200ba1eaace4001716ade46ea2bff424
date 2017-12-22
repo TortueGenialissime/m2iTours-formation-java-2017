@@ -1,0 +1,155 @@
+/*
+ * Si une classe ,n'est pas précédé par le modificateur d'accès public
+ * elle est accessible seulement dans son package
+ * elle n'est pas forcée de porter le nom du fichier qui la contient 
+ * elle peut ne pas être la seule class dans le fichier en question 
+ */
+
+package fr.m2i.etudesjava;
+/*
+ * Je veux créer une classe qui sera utiliser comme cadre pour les classes hérités 
+ * elle aura une classe toString() pouvant être utilisée sans modification dans la 
+ * plupart des sous classesahd 'accord 
+ */
+abstract class FigureGeometrique
+{
+	@Override
+	public String toString()
+	{
+		
+		/*
+		 * Cette méthode doit afficher : 
+		 * le type de la figure géométrique 
+		 * la valeur de sa surface
+		 */
+		
+		return getClass().getSimpleName() + ", Aire : " +calculerAire()+"m2";
+		
+	}
+	/*
+	 * La méthode de calcul de l'aire d'une figure géométrique dépend de la figure 
+	 * en question
+	 * Conclusion : cette méthode ne peut pas être écrite
+	 * Une méthode sans corps est une méthode abstraite, définit par le mot clé "abstract""
+	 */
+	
+	public abstract double calculerAire();
+	
+	/*
+	 * Une classe qui a une ou plusieurs méthodes abstraite doit être déclarée abstraite à son tour 
+	 * 
+	 * Une classe abstraite ne peut pas être instanciée (elle ne peut pas être utilisée pour 
+	 * créer des objets 
+	 * une telle classe ne peut servir de cadre pour des classes héritières 
+	 */
+}
+
+class MonPoint extends FigureGeometrique
+{
+	/*
+	 * je veux que cette classe soit concrète mais elle hérite la méthode abstraite calculerAire()
+	 * 	qui rend la classe MonPoint abstraite
+	 * 
+	 * Pour obtenir une classe concrèten je dois override la/les méthodes abstraite/s et lui donner un corps 
+	 */
+	@Override
+	public double calculerAire()
+	{
+		return 0;
+	}
+}
+
+class MonRectangle extends FigureGeometrique
+{
+	private double l;
+	private double h;
+	
+	public MonRectangle(double l, double h) 
+	{
+		setL(l);
+		setH(h);
+	} 
+	
+	
+	
+	public double getL() {
+		return l;
+	}
+
+
+
+	public void setL(double l) {
+		this.l = l;
+	}
+
+
+
+	public double getH() {
+		return h;
+	}
+
+
+
+	public void setH(double h) {
+		this.h = h;
+	}
+
+
+
+	@Override
+	public double calculerAire()
+	{
+		return getL()*getH();
+	}
+}
+
+class MonCarre extends MonRectangle
+{
+	public MonCarre(double l) 
+	{
+		super(l, l);
+	}
+}
+
+class MonTriangle extends FigureGeometrique 
+{
+	private double a,b,c;
+	
+	public MonTriangle(double a, double b, double c)
+	{
+		super();
+	}
+	
+	public double getA() {
+		return a;
+	}
+
+	public void setA(double a) {
+		this.a = a;
+	}
+
+	public double getB() {
+		return b;
+	}
+
+	public void setB(double b) {
+		this.b = b;
+	}
+
+	public double getC() {
+		return c;
+	}
+
+	public void setC(double c) {
+		this.c = c;
+	}
+
+	@Override
+	public double calculerAire() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
+}
+

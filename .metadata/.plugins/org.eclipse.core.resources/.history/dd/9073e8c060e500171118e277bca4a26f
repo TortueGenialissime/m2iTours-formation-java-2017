@@ -1,0 +1,58 @@
+package fr.m2i.etudesjava;
+
+public class Achat2 implements Iimposable{
+	public static enum TypesTVA{
+		
+		TVA0(0.00f),
+		TVA1(0.02f),
+		TVA5(0.05f),
+		TVA20(0.2f);
+		
+		private float taux;
+		private TypesTVA(float taux)
+		{
+			this.taux = taux;
+		}
+		
+		public float getTaux()
+		{
+			return taux;
+		}
+		
+	};
+	
+	private double prixHT;
+	private TypesTVA typeTVA;
+	public Achat2(double prixHT, TypesTVA typeTVA) {
+		this.prixHT = prixHT;
+		this.typeTVA = typeTVA;
+	}
+	
+	public double calculerImpotV1()
+	{
+		double taux;
+		
+		switch(typeTVA)
+		{
+		case TVA0:
+			taux = 0;
+			break;
+		
+		case TVA1:
+		taux = 0.02;
+		break;
+	
+		case TVA5:
+			taux = 0.055;
+			break;
+
+		default:
+			taux = 0.2;
+			break;
+		}
+		
+		return prixHT * taux;
+	}
+	
+	
+}

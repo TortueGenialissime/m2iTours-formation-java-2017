@@ -1,0 +1,196 @@
+/*
+ * Exception - condition qui sort du traaitement normal assuré âr l'application
+ * (condition normale)
+ * 
+ * Exemple d'exception: division pas zéro; accès à un élement du tableau en dehors
+ * de ses limites, tentatives de lecture d'un fichier qui n'existe pas,
+ * tentative de transtypage d'un objet d'un type qui n'existe pas
+ * 
+ * ces différentes exceptions sont définies par des classes d'exception 
+ * 
+ * par exemple une exception de classe IndexOutOfBoundsException sera levé:
+ * pour un accès dans un tableau en dehors de ses limites, IOException
+ * sera levée quand l'accès à un fichier échoue, etc
+ * 
+ * Une fois levée, une exception doit être rattrapée.
+ * si elle n'est pas rattrapée localement(au niveau de la méthode où elle a été levée),
+ * elle commence à) se propager : elle monte vers l'appelant 
+ * la propagation continue tant que l'exeption n'est pas rattrapée/traitée
+ * 
+ * Si au dernier niveau (le niveau le plus haut, c'est à dire la méthode main)
+ * L'exception n'est pas rattrapée, l'application plante
+ */
+
+package com.m2i.javafondementaux.Exception;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main2 {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		String saisie;
+		
+		while(true)
+		{
+			//System.out.println("Que voulez vous me dire ?");
+			saisie = sc.nextLine();
+			if(saisie.toLowerCase().startsWith("q"))
+			{
+				System.out.println("Au revoir !");
+				//break; //sortir de la boucle éternelle 
+				sc.close();
+				//si je veux retourner un code de sorti vers l'OS,
+				//je peux utiliser exit(code de retour)
+				System.exit(0);
+			}
+			//System.out.println(saisie);
+			
+			/*
+			 * on peut envisager de tous rattraper au niveau le plus élévé dans mais dans ce cas il est plus 
+			 * il est  plus difficile de prendre une décision d'intervenir avec plus d'efficacité
+			 * que si j'assure le rattrapage à un niveau plus rapprocher de l'endroit
+			 * où l'exception a été levée
+			 */
+			f1();
+				
+		}//fin while
+	
+	}//fin main()
+	
+	private static void f1()
+	{
+		Random random = new Random();
+		int n = random.nextInt(5);// génère tous les entiers entre 0 et valeurSpécifié -1
+		//System.out.println(n);
+		try
+		{
+		switch (1) {
+		case 0:
+			f2a();
+			break;
+			
+		case 1:
+		
+			f2b();
+			break;
+			
+		case 2:
+			
+			f2c();
+			break;
+		
+		case 3:
+				
+				f2d();
+				break;
+		}
+		}
+		catch (ArithmeticException ex)
+		{
+			System.out.println("Une exception arithmétique a été levée\n " +
+		"Raison invoquée: " + ex.getMessage());
+			
+		}
+		catch (ClassCastException ex)
+		{
+			System.out.println("Une exception ClassCastException a été levée\n " +
+					"Raison invoquée: " + ex.getMessage());
+						
+		}
+		System.out.println("Fin méthode f1()");
+	}//fin de la méthode f1
+	
+
+	private static void f2d() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void f2a()
+	{
+		// lever une Exception de référence null
+		String maChaine = null;
+		//maChaine.trim();
+		
+		//cette instruction lève une exception car on ne peut pas appeler une méthode d'instance
+		//qui n'existe pas 
+		
+		//comme il n'y a pas de rattrapage à ce niveau (ici même), l'exeption commence
+		//sa propagation vers le niveau supérieur
+		
+		//si on veut la rattraper ici mm(arreter sa propagation) il faut utilisé un bloc de rattrapage
+		/*
+		 * un tel bloc contient une clause try obligatoire
+		 * une clause catch(ou plusieurs optionnel)
+		 * une clause finally (optionnelle)
+		 * 
+		 * Remarque: try doit être suivi par au moins:
+		 * une clause catch
+		 * une clause finally
+		 */
+		try
+		{
+			maChaine = maChaine.trim();
+		} 
+		catch (NullPointerException ex)
+		{
+		//un bloc catch contient les instructions à exécuter si une exception
+			//a été levée dans le bloc try
+			System.out.println("Le type d'exception levée dans f2a(): " +
+			ex.getMessage());
+			System.out.println("La pile du programme: ");
+			ex.printStackTrace();
+			
+			/*
+			 * si dans catch une exception est levée sans quel soit contenu dans autre try catch
+			 * elle va commencé à se propager
+			 */
+			int i = 5/0;
+			//après cette expetion qui lève une exception le system cherche un blos
+			// de rattrapage et il abandonne l'exécution normale de l'application
+			//pour cette raison l'instruction ne sera pas exécuter
+			
+			System.out.println("Ce message est placé juste après la division par zéro");
+		}
+		finally 
+		{
+			/* les instructions d'un bloc finally sont toujours exécuter
+			 * en cas de succès
+			 * en cas d'échec
+			 * ou mm si une instruction return à été recontrées dans les blocs
+			 * try ou catch 
+			 */
+			System.out.println("je passe par le bloc finally f2a().");
+		}
+	}//fin f2a()
+	
+	private static void f2b()
+	{
+		//levée une exception d'indexation
+		int[] tb = new int[3];
+		
+		//initialiser l'élément indexé par 5 
+		
+		tb[5] = 10;
+	}
+
+	private static void f2c()
+	{
+		// lever une exception de transtypage
+		
+		// créer un objet non typé
+		
+		Object obj = new Object();
+		
+		// définir une variable capable de contenir un tableau
+		
+		int[] tb ;
+		
+		tb = (int[])obj;
+		
+	}
+
+}//fin classe Main

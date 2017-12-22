@@ -1,0 +1,25 @@
+package fr.m2i.thread;
+
+import java.util.ArrayList;
+
+public class Pile implements MonContainer {
+	public static ArrayList<Personne> instances = new ArrayList<>();
+	
+	private ArrayList<Personne> getPile(){
+		return instances;
+	}
+	private void push(Personne personne) {
+		
+	}
+	
+	private void pop(Personne personne) {
+		
+	}
+	
+	@Override
+	public int getNbObjets() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

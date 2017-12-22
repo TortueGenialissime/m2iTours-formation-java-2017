@@ -1,0 +1,13 @@
+package fr.m2i.etudesjava;
+
+public class Employe extends Personne 
+{
+
+	public Employe(String nom, String prenom) 
+	{
+		super(nom, prenom);
+		// TODO Auto-generated constructor stub
+	}
+
+
+}

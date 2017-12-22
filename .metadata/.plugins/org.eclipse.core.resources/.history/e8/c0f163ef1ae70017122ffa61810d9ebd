@@ -1,0 +1,7 @@
+package fr.m2i.thread;
+
+class MonContainer {
+	public String getNbObjets(Object objet) {
+		return "L'"+ objet.getClass().getSimpleName() + "contient" + objet.size();
+	}
+}

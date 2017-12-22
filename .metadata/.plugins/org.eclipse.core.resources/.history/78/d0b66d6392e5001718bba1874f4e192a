@@ -1,0 +1,6 @@
+package fr.m2i.etudesjava;
+
+public class ExceptionFormation extends RuntimeException
+{
+	private int gravite = 0;
+}

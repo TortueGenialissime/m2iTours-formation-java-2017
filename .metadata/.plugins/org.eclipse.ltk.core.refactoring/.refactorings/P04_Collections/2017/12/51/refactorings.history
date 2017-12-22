@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;fr.m2i.etudesjava.Iinterface&apos; to &apos;Iidentifiable&apos;&#x0A;- Original project: &apos;P04_Collections&apos;&#x0A;- Original element: &apos;fr.m2i.etudesjava.Iinterface&apos;&#x0A;- Renamed element: &apos;fr.m2i.etudesjava.Iidentifiable&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Iinterface&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;fr.m2i.etudesjava{Iinterface.java[Iinterface" matchStrategy="1" name="Iidentifiable" qualified="false" references="true" similarDeclarations="false" stamp="1513847104065" textual="false" version="1.0"/>
+</session>

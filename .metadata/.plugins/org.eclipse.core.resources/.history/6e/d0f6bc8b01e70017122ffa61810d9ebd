@@ -1,0 +1,6 @@
+package fr.m2i.thread;
+
+public interface ContainerStatistique {
+	public int getNbMoyenEntreesParSeconde();
+	public int getNbMoyenSortiesParSeconde();
+}

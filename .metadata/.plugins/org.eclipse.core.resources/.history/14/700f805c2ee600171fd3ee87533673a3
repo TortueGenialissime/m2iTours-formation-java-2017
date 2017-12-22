@@ -1,0 +1,5 @@
+package fr.m2i.etudesjava;
+
+public interface Iidentifiable {
+	String créerClé();
+}

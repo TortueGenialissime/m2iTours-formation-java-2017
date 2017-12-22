@@ -1,0 +1,71 @@
+package fr.m2i.thread;
+
+import java.util.Vector;
+
+public class FileAttente implements MonContainer{
+	private int dureeTache = 22;
+	public static Vector<Personne> instances = new Vector<>();
+	public static int countPersonnes = instances.size()-1;
+	
+	public void ajouter(Personne personne) {
+		instances.addElement(personne);
+	}
+	public void retirer(Personne personne) {
+		instances.remove(personne);
+	}
+	
+	public Personne peek(int index)
+	{
+		return instances.get(index);
+	}
+	
+	public Personne peek() 
+	{
+		int lastIndex = instances.size()-1;
+		return instances.get(lastIndex);
+		
+	}
+	
+	public int returnPos(Personne personne)
+	{
+		int i = 0;
+		for(Personne p : instances)
+		{
+			i++;
+			if(p.equals(personne)) {
+				break;
+			}
+		}
+		return i;
+	}
+	
+	public int exist(Personne personne)
+	{
+		for(Personne p : instances)
+		{
+			boolean bool = false;
+			if(p.equals(personne)) 
+			{
+				bool = true;
+				break;
+			}
+		}
+	}
+	
+	
+	@Override
+	public String getNbObjets() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public void retirerPremier()
+	{
+		instances.remove(0);
+	}
+	
+	public int getAttenteMoyenne(Personne personne)
+	{
+		
+	}
+}

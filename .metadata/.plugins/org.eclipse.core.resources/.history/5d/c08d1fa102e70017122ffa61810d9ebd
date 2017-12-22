@@ -1,0 +1,17 @@
+package fr.m2i.thread;
+
+public interface ContainerStatistique {
+	public static int countEntrees = 0;
+	public static int countSorties = 0;
+	public static float dureeSorties = 0;
+	public static float dureeEntrees = 0;
+	
+	
+	public default int getNbMoyenEntreesParSeconde() {
+		return (int) (countSorties / countEntrees);
+	}
+	public default int getNbMoyenSortiesParSeconde() 
+	{
+		return (int) (dureeSorties / countSorties);
+	}
+}
