@@ -7,9 +7,9 @@
 git clone git@github.com:TortueGenialissime/m2iTours-formation-java-2017.git
 ```
 - Se créer une branche portant votre nom et travailler dessus (Veuillez à bien travailler sur votre branche)
-'''
+```
 git checkout -b VotreNom
 
-'''
+```
 
 Pour ce documenter sur les commandes Git : (https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
