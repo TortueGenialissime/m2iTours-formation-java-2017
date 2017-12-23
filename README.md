@@ -1,4 +1,4 @@
-# m2iTours-formation-java-2017
+# GitHub d'entaide Formation m2i Java 2017-2018
 ## Pour récupérer le repository, vous devez : 
 - Suivre ce tutoriel expliquant comment se connecter à GitHub en ssh (https://help.github.com/articles/connecting-to-github-with-ssh/) (s'arréter jusqu'à l'article "Testing your SSH connection »)
 - M'envoyer vos clé SSH par mail : paullegall28@icloud.com
