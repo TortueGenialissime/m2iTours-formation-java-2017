@@ -13,4 +13,5 @@ git checkout -b VotreNom
 
 Pour ce documenter sur les commandes Git : <br/>
 https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github <br/>
-https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html <br/>
+https://www.grafikart.fr/formations/git/
