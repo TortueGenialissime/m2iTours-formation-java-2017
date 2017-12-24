@@ -7,8 +7,7 @@ public class FileAttente extends MonContainer implements ContainerStatistique{
 	private int dureeTache = 22;
 	private int countEntrees = 0;
 	private int countSorties = 0;
-	private int dureeEntrees = 0;
-	private int dureeSorties = 0;
+	private int dureeIO = 0;
 	private Vector<Personne> instances = new Vector<>();
 	private int countPersonnes = instances.size();
 	
@@ -20,12 +19,12 @@ public class FileAttente extends MonContainer implements ContainerStatistique{
 	public void ajouter(Personne personne, int time) {
 		instances.addElement(personne);
 		countEntrees++;
-		dureeEntrees += time;
+		dureeIO += time;
 	}
 	public void retirer(Personne personne, int time) {
 		instances.remove(personne);
 		countSorties++;
-		dureeSorties += time;
+		dureeIO += time;
 	}
 	
 	public Personne peek(int index)
@@ -79,7 +78,7 @@ public class FileAttente extends MonContainer implements ContainerStatistique{
 		{
 			instances.remove(0);
 			countSorties++;
-			dureeSorties += time;
+			dureeIO += time;
 		}
 	}
 	
@@ -121,12 +120,12 @@ public class FileAttente extends MonContainer implements ContainerStatistique{
 	@Override
 	public float getNbMoyenEntreesParSeconde() 
 	{
-		return (countEntrees > 0) ? (dureeEntrees / countEntrees) : 0;
+		return (countEntrees > 0) ? (dureeIO / countEntrees) : 0;
 	}
 	@Override
 	public float getNbMoyenSortiesParSeconde() 
 	{
-		return (countSorties > 0) ? (dureeSorties / countSorties) : 0;
+		return (countSorties > 0) ? (dureeIO / countSorties) : 0;
 	}
 	
 }
