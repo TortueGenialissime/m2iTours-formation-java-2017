@@ -1,6 +1,0 @@
-package fr.m2i.thread;
-
-public interface MonContainer {
-	public Object instances;
-	public String getNbObjets();
-}

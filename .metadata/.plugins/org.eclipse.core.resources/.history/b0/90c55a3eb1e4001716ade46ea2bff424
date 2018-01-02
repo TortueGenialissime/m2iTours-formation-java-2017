@@ -1,6 +1,0 @@
-package fr.m2i.etudesjava;
-
-interface IMesurable
-{
-	
-}

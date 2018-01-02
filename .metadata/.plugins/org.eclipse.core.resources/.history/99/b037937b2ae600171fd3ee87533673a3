@@ -1,6 +1,0 @@
-package fr.m2i.etudesjava;
-
-public class Automobile {
-	private String marque, couleur;
-	private float prix;
-}

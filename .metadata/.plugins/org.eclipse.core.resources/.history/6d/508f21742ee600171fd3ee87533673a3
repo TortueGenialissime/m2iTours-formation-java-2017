@@ -1,6 +1,0 @@
-package fr.m2i.etudesjava;
-
-public interface Iidentifiable {
-	private int static id = 0;
-	String créerClé();
-}
