@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Squelette</title>
+        <style>
+        
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            a, p, h1, h2, h3, h4, h5, h6 {
+                font-family: sans-serif;
+            }
+            
+            header {
+                height: 100px;
+                background: #333;
+            }
+            
+            
+            header nav ul {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between; 
+                max-width: 960px;
+                margin: 0 auto;
+                align-content: flex-end;
+            }
+            
+            header nav ul li {
+                list-style: none;
+                line-height: 100px;
+            }
+            
+            header nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 12px;
+                text-transform: uppercase;
+                padding: 10px 15px;
+                color: #333;
+                background: white;
+                border-radius: 5px;
+            }
+            article {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            
+            article p {
+                margin: 20px 0;
+                font-size: 15px
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#p2">Page 1</a></li>
+                    <li><a href="#p1">Page 2</a></li>
+                    <li><a href="#p1">Page 3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <article>
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, nulla in ultricies pharetra, dolor mauris condimentum ante, eget aliquam orci erat ac augue. Curabitur vestibulum odio lectus, quis semper metus condimentum nec. Ut lectus lectus, tristique nec fringilla quis, gravida sed enim. Suspendisse condimentum et elit non vehicula. Donec feugiat eget orci ut malesuada. Donec quis massa dapibus, bibendum urna eget, eleifend arcu. Nunc auctor id elit et elementum. Integer nunc tellus, commodo ut sem tempor, venenatis tempus urna.</p>
+        <p id="p2">Praesent sed lacinia libero, facilisis blandit nisl. Nunc iaculis urna eu fermentum vestibulum. Maecenas auctor justo quis libero tincidunt tristique. Mauris luctus quam ut ex accumsan interdum. Morbi bibendum ac justo vel pharetra. Sed iaculis et nibh condimentum pellentesque. Duis id nisi efficitur, dignissim ante sit amet, pretium urna. Sed eu imperdiet dui. Sed molestie ante eleifend massa cursus, sagittis rhoncus erat ornare. Praesent pellentesque mollis nulla. Suspendisse porta odio porta nulla malesuada luctus. Morbi molestie metus maximus nulla ultricies aliquam quis et elit. Aenean placerat metus elit, sit amet molestie sapien cursus eget. Morbi varius nec sapien ac imperdiet.</p>
+            </article>
+    </body>
+</html>
