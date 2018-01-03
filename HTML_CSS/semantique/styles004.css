@@ -13,10 +13,16 @@ header, nav, article, section, footer, aside
 header
 {
     position: relative;
-    padding: 10px;
+    padding: 20px 10px;
     box-sizing: border-box;
     height: 34.8vw;
     background: rgba(0,0,0, 0.5);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+header:hover {
+    background: rgba(0,0,0, 0.3);
 }
 header:before {
     content: "";
@@ -31,47 +37,61 @@ header:before {
     background-size: cover;
 }
 header h1{
-    font-size: 40px;
+    font-size: 50px;
+    padding: 20px 20px 0px 20px;
+    color: #cde8b0;
 }
 header p{
     color: #eee;
     font-size: 15px;
+    padding-left: 30px !important;
 }
 
 nav 
 {
-    float: left;
     width: 20%;
-    background-color: #ccc;
-    padding: 10px;
+    background-color: #cde8b0;
+    min-height: 600px;
+    padding: 20px 10px;
     box-sizing: border-box;
+}
+
+nav h2 {
+    color: #2c2c2c;
 }
 
 article 
 {
-  background-color: #fff;
-        padding: 10px;
+  background-color: #cde8b01c;
+    padding: 20px;
     box-sizing: border-box;
-
 }
  
 aside
 {
   float:right; 
   width:20%;
-  background-color:#ccc;
-        padding: 10px;
+  background-color:#cde8b0;
+    padding: 20px 10px;
         box-sizing: border-box;
     min-height: 195px;
+}
 
+aside h2 {
+    color: #2c2c2c;
 }
  
 footer 
 {
   clear:both;
-        padding: 10px;
+    padding: 30px 10px;
     box-sizing: border-box;
-background-color: #333;
+background-color: #222;
+}
+
+footer p {
+    color: white;
+    text-align: center;
 }
 
 h1, h2 {
@@ -79,16 +99,15 @@ h1, h2 {
     color: #bbb;
 }
 h2{
-    color: #555;
+    color: #badb96;
     padding-bottom: 10px;
 }
 
 section{
-    float: left;
     width: 60%;
 }
 p, a{
-    font-family: verdana;
+    font-family: calibri;
     font-size: 13px;
         color: #555;
 }
@@ -104,15 +123,33 @@ h2+p {
 
 ul li a{
    text-decoration: none;
-    color: #fff;
+    color: #cde8b0;
+    text-transform: uppercase;
+    display: block;
 }
 li {
     text-align: center;
     height: 40px;
     line-height: 40px;
-        background: #333;
-    border-bottom: 10px solid #ccc
+        background: #2c2c2c;
+    border-bottom: 10px solid #cde8b0;
+        list-style: none;
+    transition: 0.2s;
+    
+}
+
+ul li:hover{
+    border-right: 20px solid #cde8b0;
+        transition: 0.2s;
+}
+ul li:hover:nth-child(odd){
+    border-left: 20px solid #cde8b0;
+    border-right: none;
 }
 ul li:last-child{
         border-bottom: none;
+}
+
+#wrap {
+    display: flex;
 }
