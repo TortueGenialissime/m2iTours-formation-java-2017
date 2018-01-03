@@ -1,0 +1,118 @@
+@import url(fonts/stylesheet.css);
+
+header, nav, article, section, footer, aside 
+{ 
+  display: block; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+header
+{
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 34.8vw;
+    background: rgba(0,0,0, 0.5);
+}
+header:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    background-image: url(bkg/maxresdefault.jpg);
+    background-position: left top;
+    background-size: cover;
+}
+header h1{
+    font-size: 40px;
+}
+header p{
+    color: #eee;
+    font-size: 15px;
+}
+
+nav 
+{
+    float: left;
+    width: 20%;
+    background-color: #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+article 
+{
+  background-color: #fff;
+        padding: 10px;
+    box-sizing: border-box;
+
+}
+ 
+aside
+{
+  float:right; 
+  width:20%;
+  background-color:#ccc;
+        padding: 10px;
+        box-sizing: border-box;
+    min-height: 195px;
+
+}
+ 
+footer 
+{
+  clear:both;
+        padding: 10px;
+    box-sizing: border-box;
+background-color: #333;
+}
+
+h1, h2 {
+    font-family: "pricedownblack";
+    color: #bbb;
+}
+h2{
+    color: #555;
+    padding-bottom: 10px;
+}
+
+section{
+    float: left;
+    width: 60%;
+}
+p, a{
+    font-family: verdana;
+    font-size: 13px;
+        color: #555;
+}
+p{
+    color: #333;
+}
+h1+p {
+        padding-left: 10px;
+}
+h2+p {
+        padding-left: 10px;
+}
+
+ul li a{
+   text-decoration: none;
+    color: #fff;
+}
+li {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+        background: #333;
+    border-bottom: 10px solid #ccc
+}
+ul li:last-child{
+        border-bottom: none;
+}
