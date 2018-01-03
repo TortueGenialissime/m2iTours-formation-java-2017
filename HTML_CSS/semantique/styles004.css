@@ -191,3 +191,7 @@ input:focus {
   outline-style: none;
     color: white;
 }
+
+input:focus::-webkit-input-placeholder {
+    color: #ffffff6b;
+}
