@@ -40,11 +40,13 @@ color: white;
 p, span{
 font-size: 12px;
 }
-
-h1{
+    h1{
+        padding: 10px 20px;
+    }
+h2{
 font-size: 16px;
 color: #333;
-font-familly: calibri;
+font-family: calibri;
 }
 
 .nb {
@@ -56,6 +58,8 @@ background: #ff4444;
 text-align: center;
 line-height: 40px;
 color: white;
+    margin-top: 10px;
+    margin-right: 5px;
 }
 #reset {
 display: inline-block;
@@ -72,8 +76,16 @@ background: #ff4444;
     
     #nbContainer{
         display: inline-block;
-        width: 315px;
-        padding: 5px 0 0 10px;
+        width: 305px;
+        min-height: 90px;
+        background: #f8f8f8;
+        text-align: center;
+    }
+    
+    #nbContainer h2 {
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 5px;
     }
     
     .clear {
@@ -82,6 +94,7 @@ background: #ff4444;
 </style>
 </head>
 <body>
+    <h1>Le loto du turfu</h1>
 <div id="grille">
 <% 
 
@@ -143,7 +156,7 @@ ArrayList<Integer> nbTab = (ArrayList<Integer>)session.getAttribute("nbTab");
 </form>
 </div>
         <div id="nbContainer">
-<h1>Vos numéros</h1>
+<h2>Vos numéros</h1>
 <%
 if(session.getAttribute("nbTab") != null){
 	for(int i : (ArrayList<Integer>)session.getAttribute("nbTab")){
