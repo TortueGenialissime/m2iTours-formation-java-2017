@@ -11,7 +11,7 @@ git clone git@github.com:TortueGenialissime/m2iTours-formation-java-2017.git
 git checkout -b VotreNom
 ```
 
-Pour ce documenter sur les commandes Git : <br/>
+Pour se documenter sur les commandes Git : <br/>
 https://www.grafikart.fr/formations/git/ (très complet, je recommande) <br/> 
 https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github <br/>
 https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html <br/>
