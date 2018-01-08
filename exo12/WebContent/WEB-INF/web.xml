@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <web-app>
+	 <servlet>
+		 <servlet-name>monservlet</servlet-name>
+		 <servlet-class>exo12.Index</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+		 <servlet-name>monservlet</servlet-name>
+		 <url-pattern>/index</url-pattern>
+	 </servlet-mapping>
+ </web-app>
